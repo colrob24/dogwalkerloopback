@@ -1,0 +1,19 @@
+{
+  "ids": {
+    "dog-walker": 5,
+    "DogWalker": 4
+  },
+  "models": {
+    "dog-walker": {
+      "1": "{\"firstName\":\"Colin\",\"lastName\":\"Robertson\",\"id\":1}",
+      "2": "{\"firstName\":\"Christina\",\"lastName\":\"Walker\",\"id\":2}",
+      "3": "{\"firstName\":\"Agnes\",\"lastName\":\"Two Poos\",\"id\":3}",
+      "4": "{\"firstName\":\"Ruby\",\"lastName\":\"Raptor\",\"id\":4}"
+    },
+    "DogWalker": {
+      "1": "{\"firstName\":\"Ronald\",\"lastName\":\"McDonald\",\"id\":1}",
+      "2": "{\"firstName\":\"Charlie\",\"lastName\":\"Kelly\",\"id\":2}",
+      "3": "{\"firstName\":\"Dennis\",\"lastName\":\"Reynolds\",\"id\":3}"
+    }
+  }
+}
