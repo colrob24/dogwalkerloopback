@@ -1,7 +1,8 @@
 {
   "ids": {
     "dog-walker": 5,
-    "DogWalker": 4
+    "DogWalker": 4,
+    "Dog": 3
   },
   "models": {
     "dog-walker": {
@@ -14,6 +15,10 @@
       "1": "{\"firstName\":\"Ronald\",\"lastName\":\"McDonald\",\"id\":1}",
       "2": "{\"firstName\":\"Charlie\",\"lastName\":\"Kelly\",\"id\":2}",
       "3": "{\"firstName\":\"Dennis\",\"lastName\":\"Reynolds\",\"id\":3}"
+    },
+    "Dog": {
+      "1": "{\"firstName\":\"Agnes\",\"lastName\":\"Robertson\",\"size\":\"Medium\",\"breed\":\"West Highland Terrier\",\"allowedOffLead\":true,\"birthYear\":2014,\"vacineProofSeen\":true,\"id\":1}",
+      "2": "{\"firstName\":\"Ruby\",\"lastName\":\"Robertson\",\"size\":\"Small\",\"breed\":\"Mixed\",\"allowedOffLead\":false,\"birthYear\":2017,\"vacineProofSeen\":true,\"id\":2}"
     }
   }
 }

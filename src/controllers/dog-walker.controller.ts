@@ -9,7 +9,7 @@ export class DogWalkerController {
     public dogWalkerRepository: DogWalkerRepository,
   ) {}
 
-  @post('/dogwalker', {
+  @post('/dogwalkers', {
     responses: {
       '200': {
         description: 'DogWalker model instance',
@@ -33,7 +33,7 @@ export class DogWalkerController {
     return this.dogWalkerRepository.create(dogWalker);
   }
 
-  @get('/dogwalker/count', {
+  @get('/dogwalkers/count', {
     responses: {
       '200': {
         description: 'DogWalker model count',
@@ -47,7 +47,7 @@ export class DogWalkerController {
     return this.dogWalkerRepository.count(where);
   }
 
-  @get('/dogwalker', {
+  @get('/dogwalkers', {
     responses: {
       '200': {
         description: 'Array of DogWalker model instances',
@@ -68,7 +68,7 @@ export class DogWalkerController {
     return this.dogWalkerRepository.find(filter);
   }
 
-  @patch('/dogwalker', {
+  @patch('/dogwalkers', {
     responses: {
       '200': {
         description: 'DogWalker PATCH success count',
@@ -90,7 +90,7 @@ export class DogWalkerController {
     return this.dogWalkerRepository.updateAll(dogWalker, where);
   }
 
-  @get('/dogwalker/{id}', {
+  @get('/dogwalkers/{id}', {
     responses: {
       '200': {
         description: 'DogWalker model instance',
@@ -109,7 +109,7 @@ export class DogWalkerController {
     return this.dogWalkerRepository.findById(id, filter);
   }
 
-  @patch('/dogwalker/{id}', {
+  @patch('/dogwalkers/{id}', {
     responses: {
       '204': {
         description: 'DogWalker PATCH success',
@@ -130,7 +130,7 @@ export class DogWalkerController {
     await this.dogWalkerRepository.updateById(id, dogWalker);
   }
 
-  @put('/dogwalker/{id}', {
+  @put('/dogwalkers/{id}', {
     responses: {
       '204': {
         description: 'DogWalker PUT success',
@@ -144,7 +144,7 @@ export class DogWalkerController {
     await this.dogWalkerRepository.replaceById(id, dogWalker);
   }
 
-  @del('/dogwalker/{id}', {
+  @del('/dogwalkers/{id}', {
     responses: {
       '204': {
         description: 'DogWalker DELETE success',
