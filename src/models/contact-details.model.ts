@@ -1,17 +1,7 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, hasOne, model, property} from '@loopback/repository';
+import {DogWalker} from './dog-walker.model';
 
-@model({
-  settings: {
-    foreignKeys: {
-      fk_contactDetails_dogwalkerId: {
-        name: 'fk_contactDetails_dogwalkerId',
-        entity: 'dog-walker',
-        entityKey: 'id',
-        foreignKey: 'DogWalkerId',
-      },
-    },
-  },
-})
+@model()
 export class ContactDetails extends Entity {
   @property({
     type: 'number',
@@ -49,12 +39,8 @@ export class ContactDetails extends Entity {
   })
   Postcode: string;
 
-  @property({
-    type: 'number',
-    required: true,
-  })
-  DogWalkerId: number;
-
+  @hasOne(() => DogWalker)
+  dogWalker?: DogWalker;
 
   constructor(data?: Partial<ContactDetails>) {
     super(data);
