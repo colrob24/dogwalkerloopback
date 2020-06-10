@@ -1,22 +1,13 @@
-import {
-  repository,
-} from '@loopback/repository';
-import {
-  param,
-  get,
-  getModelSchemaRef,
-} from '@loopback/rest';
-import {
-  Walk,
-  Schedule,
-} from '../models';
+import {repository} from '@loopback/repository';
+import {get, getModelSchemaRef, param} from '@loopback/rest';
+import {Schedule, Walk} from '../models';
 import {WalkRepository} from '../repositories';
 
 export class WalkScheduleController {
   constructor(
     @repository(WalkRepository)
     public walkRepository: WalkRepository,
-  ) { }
+  ) {}
 
   @get('/walks/{id}/schedule', {
     responses: {
@@ -31,7 +22,7 @@ export class WalkScheduleController {
     },
   })
   async getSchedule(
-    @param.path.any('id') id: typeof Walk.prototype.id,
+    @param.path.number('id') id: typeof Walk.prototype.id,
   ): Promise<Schedule> {
     return this.walkRepository.schedule(id);
   }

@@ -4,11 +4,11 @@ import {Schedule} from './schedule.model';
 @model()
 export class Walk extends Entity {
   @property({
-    type: 'any',
+    type: 'number',
     id: true,
     generated: true,
   })
-  id?: any;
+  id?: number;
 
   @property({
     type: 'number',
