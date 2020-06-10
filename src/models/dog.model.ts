@@ -3,51 +3,52 @@ import {Entity, model, property} from '@loopback/repository';
 @model()
 export class Dog extends Entity {
   @property({
-    type: 'string',
-    required: true,
-  })
-  firstName: string;
-
-  @property({
-    type: 'string',
-    required: true,
-  })
-  lastName: string;
-
-  @property({
-    type: 'string',
-  })
-  size?: string;
-
-  @property({
-    type: 'string',
-  })
-  breed?: string;
-
-  @property({
-    type: 'boolean',
-    required: true,
-  })
-  allowedOffLead: boolean;
-
-  @property({
-    type: 'number',
-    required: true,
-  })
-  birthYear: number;
-
-  @property({
-    type: 'boolean',
-    required: true,
-  })
-  vacineProofSeen: boolean;
-
-  @property({
     type: 'number',
     id: true,
     generated: true,
   })
   id?: number;
+
+  @property({
+    type: 'string',
+    required: true,
+  })
+  FirstName: string;
+
+  @property({
+    type: 'string',
+    required: true,
+  })
+  LastName: string;
+
+  @property({
+    type: 'string',
+    required: true,
+  })
+  Size: string;
+
+  @property({
+    type: 'string',
+    required: true,
+  })
+  Breed: string;
+
+  @property({
+    type: 'number',
+    required: true,
+  })
+  YearOfBirth: number;
+
+  @property({
+    type: 'boolean',
+    required: true,
+  })
+  AllowedOffLeash: boolean;
+
+  @property({
+    type: 'boolean',
+  })
+  Vaccinated?: boolean;
 
 
   constructor(data?: Partial<Dog>) {
