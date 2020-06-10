@@ -1,5 +1,5 @@
-import {belongsTo, Entity, model, property} from '@loopback/repository';
-import {ContactDetails, ContactDetailsWithRelations} from './contact-details.model';
+import {Entity, model, property, belongsTo} from '@loopback/repository';
+import {ContactDetails} from './contact-details.model';
 
 @model()
 export class DogWalker extends Entity {
@@ -35,7 +35,7 @@ export class DogWalker extends Entity {
   Active: boolean;
 
   @belongsTo(() => ContactDetails)
-  ContactDetailsId: number;
+  contactDetailsId: number;
 
   constructor(data?: Partial<DogWalker>) {
     super(data);
@@ -44,7 +44,6 @@ export class DogWalker extends Entity {
 
 export interface DogWalkerRelations {
   // describe navigational properties here
-  ContactDetails?: ContactDetailsWithRelations
 }
 
 export type DogWalkerWithRelations = DogWalker & DogWalkerRelations;

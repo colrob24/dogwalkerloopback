@@ -1,4 +1,4 @@
-import {Entity, hasOne, model, property} from '@loopback/repository';
+import {Entity, model, property, hasOne} from '@loopback/repository';
 import {DogWalker} from './dog-walker.model';
 
 @model()
@@ -40,7 +40,7 @@ export class ContactDetails extends Entity {
   Postcode: string;
 
   @hasOne(() => DogWalker)
-  dogWalker?: DogWalker;
+  dogWalker: DogWalker;
 
   constructor(data?: Partial<ContactDetails>) {
     super(data);
