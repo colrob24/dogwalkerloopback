@@ -1,4 +1,4 @@
-# dog-walking-loopback
+# Dog Walking API
 
 ![Node.js CI](https://github.com/colrob24/dogwalkerloopback/workflows/Node.js%20CI/badge.svg)
 
